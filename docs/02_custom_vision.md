@@ -1,4 +1,4 @@
-# Custom Vision で画像分類器を作成
+# Custom Vision で画像分類器の作成
 
 [**Custom Vision**](https://www.customvision.ai/) で画像分類器を作成します。
 
