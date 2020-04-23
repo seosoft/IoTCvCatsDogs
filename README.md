@@ -22,3 +22,11 @@ Custom Vision や Azure IoT の概要を知りたい場合、または開発の�
 
 
 このアプリケーションは、[**勝手に勉強会** (2020年4月19日 開催)](https://katte.connpass.com/event/173288/) の説明・デモで使用したものです。
+
+[Azure IoT Edge の公式チュートリアル](https://docs.microsoft.com/ja-jp/azure/iot-edge/tutorial-deploy-custom-vision) を元に、
+
+- 手順の整理
+- 手順の追加
+- アプリケーションのソースコードを一部改訂
+
+しました。
