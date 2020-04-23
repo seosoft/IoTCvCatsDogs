@@ -70,7 +70,7 @@ Custom Vision の主な特徴は以下の通りです。
 
    |項目名|入力・選択|説明|
    |---|---|---|
-   |Name|今回は "CatsDogsClassifier"| |
+   |Name|ここでは "CatsDogsClassifier"| |
    |Resources|Azure で作成した Custom Vision のリソース| |
    |Project Types|Classification|画像分類|
    |Classification Types|Multiclass|画像ごとに一つタグ付け|
@@ -163,7 +163,7 @@ Custom Vision の学習モデルは非常に簡単に作れたので、続いて
 以上で Custom Vision で画像分類器を作成して、学習モデルをエクスポートしました。  
 簡単な手順で学習できることが分かったと思います。
 
-次は Visual Studio Code を使って、IoT Edge デバイスで動作するアプリケーションを作っていきます。
+次から Visual Studio Code を使って、IoT Edge デバイスで動作するアプリケーションを作っていきます。
 
-[前に戻る](./01_install.md) | 次に進む  
+[前に戻る](./01_install.md) | [次に進む](./03_create_edgeapp.md)
 [目次に戻る](../README.md)
