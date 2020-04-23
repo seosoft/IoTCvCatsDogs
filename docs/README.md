@@ -7,9 +7,9 @@ Azure IoT Edge ＋ Custom Vision を使ってエッジデバイスで画像分�
 1. [開発環境の構築](./01_install.md)
 2. [Custom Vision で画像分類器の作成](./02_custom_vision.md)
 3. [IoT Edge ソリューションの作成](./03_create_edgeapp.md)
-4. [classifier モジュールの編集](./04_edit_classfier.md)
+4. [予測サービスモジュールの編集](./04_edit_classfier.md)
 <!-- 5. [カメラモジュールの作成](./05_create_cameramodule.md) -->
-<!-- 6. [Container Registry にモジュールをアップロード](./04_upload_to_acr.md) -->
+<!-- 6. [Container Registry にモジュールをアップロード](./06_upload_to_acr.md) -->
 
 <img src="../docs/images/customvision_top_image.jpg" width="360px" />
 <img src="../docs/images/iotedge_top_image.jpg" width="360px" />
@@ -23,3 +23,5 @@ Azure IoT Edge ＋ Custom Vision を使ってエッジデバイスで画像分�
 - アプリケーションのソースコードを一部改訂
 
 しました。
+
+このハンズオンでは、物理デバイスを使用せずに **カメラのシミュレーター**を使います。

@@ -83,7 +83,7 @@ Visual Studio Code で IoT Edge ソリューションを作成します。
 5. モジュール名を入力します。  
    ここでは "**classifier**" とします。  
    あとの手順の都合で、全て小文字で入力します。  
-   このモジュールは、あとの手順で Custom Vision の学習モデルを利用して予測する Web サービスを作成するひな形です。
+   このモジュールは、Custom Vision の学習モデルを利用する予測サービスのひな形として、あとの手順で使用します。
 
    <img src="./images/03/vs_new_solution_module_name.jpg" width="480px" />
 
