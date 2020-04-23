@@ -81,7 +81,9 @@ Visual Studio Code で IoT Edge ソリューションを作成します。
    <img src="./images/03/vs_new_solution_module_template.jpg" width="480px" />
 
 5. モジュール名を入力します。  
-   ここでは "**classifier**" とします。（あとの手順の都合で、全て小文字で）
+   ここでは "**classifier**" とします。  
+   あとの手順の都合で、全て小文字で入力します。  
+   このモジュールは、あとの手順で Custom Vision の学習モデルを利用して予測する Web サービスを作成するひな形です。
 
    <img src="./images/03/vs_new_solution_module_name.jpg" width="480px" />
 
@@ -117,10 +119,10 @@ Visual Studio Code で IoT Edge ソリューションを作成します。
 
 ---
 
-以上で IoT Edge ソリューションを新規作成できました。  
-ただしソリューションの "枠組み" ができただけの状態です。
+以上で IoT Edge ソリューションを新規作成してアプリケーションを作成する準備ができました。  
+ここまでのステップではソリューションの "枠組み" ができたの状態です。
 
-次のステップから、コードの追加・編集などを行っていきます。
+次のステップから、コードの追加・編集などを行ってアプリケーションを開発していきます。
 
 [前に戻る](./02_custom_vision.md) | [次に進む](./04_edit_classfier.md)
 [目次に戻る](../README.md)
