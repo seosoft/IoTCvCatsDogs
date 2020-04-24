@@ -96,10 +96,10 @@ OS の再起動後に Docker Desktop が起動すればインストール完了�
 
 ## Anaconda
 
-Anaconda または Python は、このハンズオンでは不要です。  
+Anaconda または Python は、このハンズオンでは必須ではありません。  
 
 ただし同様のアプリケーションを開発する場合は、Python のコードを編集したりデバッグしたりする必要が出てきます。  
-あわせて [インストール](https://www.anaconda.com/distribution/#download-section) することをお勧めします。
+ここで一緒に [インストール](https://www.anaconda.com/distribution/#download-section) することをお勧めします。
 
 ---
 
