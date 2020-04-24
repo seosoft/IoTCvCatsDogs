@@ -9,7 +9,8 @@ Azure IoT Edge ＋ Custom Vision を使ってエッジデバイスで画像分�
 3. [IoT Edge ソリューションの作成](./03_create_edgeapp.md)
 4. [予測サービスモジュールの編集](./04_edit_classfier.md)
 5. [カメラモジュールの作成](./05_create_cameramodule.md)
-<!-- 6. [Container Registry にモジュールをアップロード](./06_upload_to_acr.md) -->
+6. [Container Registry にモジュールをアップロード](./06_upload_to_acr.md)
+<!-- 7. [IoT Hub / Edge デバイスの準備とソリューションのローカル実行](./07_create_iothub_edgedevice.md) -->
 
 <img src="../docs/images/customvision_top_image.jpg" width="360px" />
 <img src="../docs/images/iotedge_top_image.jpg" width="360px" />
