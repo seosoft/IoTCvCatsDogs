@@ -18,7 +18,10 @@ Custom Vision や Azure IoT の概要を知りたい場合、または開発の�
 ---
 
 <img src="./docs/images/customvision_top_image.jpg" width="360px" />
+<br />
 <img src="./docs/images/iotedge_top_image.jpg" width="360px" />
+<br />
+<img src="./docs/images/08/vs_display_buildin_monitor.jpg" width="480px" />
 
 
 このアプリケーションは、[**勝手に勉強会** (2020年4月19日 開催)](https://katte.connpass.com/event/173288/) の説明・デモで使用したものです。
