@@ -16,6 +16,8 @@ Azure IoT Edge ＋ Custom Vision を使ってエッジデバイスで画像分�
 <img src="../docs/images/customvision_top_image.jpg" width="360px" />
 <br />
 <img src="../docs/images/iotedge_top_image.jpg" width="360px" />
+<br />
+<img src="../docs/images/08/vs_display_buildin_monitor.jpg" width="480px" />
 
 ---
 
