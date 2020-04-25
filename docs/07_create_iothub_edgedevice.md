@@ -138,7 +138,20 @@ IoT Edge ソリューションをローカル PC 上のエミュレーターで�
 
    <img src="./images/07/vs_simulator_predict_2.jpg" width="480px" />
 
-4. シミュレーターを終了するには、ターミナルで **Ctrl + C** を押します。
+4. モジュールの出力は Docker Desktop Dashboard でも確認できます。  
+   Docker Desktop のタスクトレーアイコンを右クリックして [**Dashboard**] を開きます。
+
+   <img src="./images/07/open_docker_dashboard.jpg" width="360px" />
+
+5. Docker Desktop 上でソリューションの各モジュール（edgeAgent は除く） が動作して売ることが分かります。
+
+   <img src="./images/07/docker_desktop_moduls.jpg" width="480px" />
+
+6. "**cameraCapture**" のログにも結果が出力されています。
+
+   <img src="./images/07/docker_desktop_log.jpg" width="480px" />
+
+7. シミュレーターを終了するには、Visual Studio Code のターミナルで **Ctrl + C** を押します。
 
 ---
 
