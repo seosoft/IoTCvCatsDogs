@@ -21,7 +21,7 @@
 2. 前の手順で作成した "CatsDogsEdgeSolution" ソリューションの "modules\classfier" フォルダーをエクスプローラーで開きます。
 3. ZIP ファイル内のフォルダー2つ、ファイル2つをすべて "classfier" フォルダーにコピーします。
 
-   <img src="./images/04/copy_zip_to_classfier.jpg" width="480px" />
+   <img src="./images/04/copy_zip_to_classfier.jpg" width="560px" />
 
    > 実際には "README.txt" はこのハンズオンではコピー不要です。  
    > エクスポートしたファイル群を使った 予測 Web サービスの参考情報が載っているため、今回はコピーしました。  
@@ -49,7 +49,7 @@
    }
    ```
 
-   <img src="./images/04/vs_classifier_module_json.jpg" width="480px" />
+   <img src="./images/04/vs_classifier_module_json.jpg" width="560px" />
 
    > 参考として、変更前の "platforms" パラメーターは以下の通りです。
    >
@@ -81,7 +81,7 @@
 - Dockerfile.arm64v8.debug
 - main.py
 
-<img src="./images/04/vs_classfier_delete_files.jpg" width="480px" />
+<img src="./images/04/vs_classfier_delete_files.jpg" width="560px" />
 
 ---
 

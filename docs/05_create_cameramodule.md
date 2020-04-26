@@ -19,28 +19,28 @@
 
 1. Visual Studio Code の [コマンドパレット] (Ctrl + Shift + P) で "**Add IoT Edge Module**" を選択します。
 
-   <img src="./images/05/vs_add_edge_module.jpg" width="480px" />
+   <img src="./images/05/vs_add_edge_module.jpg" width="560px" />
 
 2. [**Select Deployment Template file**] ではデフォルトで表示されている "**deployment.template.json**" を選択します。
 
-   <img src="./images/05/vs_select_deployment_template.jpg" width="480px" />
+   <img src="./images/05/vs_select_deployment_template.jpg" width="560px" />
 
 3. [**Selct Module Template**] では "**Python Module**" を選択します。
 
-   <img src="./images/05/vs_select_module_template.jpg" width="480px" />
+   <img src="./images/05/vs_select_module_template.jpg" width="560px" />
 
 4. モジュール名を入力します。今回は "**cameraCapture**" とします。
 
-   <img src="./images/05/vs_new_edge_module_name.jpg" width="480px" />
+   <img src="./images/05/vs_new_edge_module_name.jpg" width="560px" />
 
 5. [**Provide Docker Image Repository for the Module**] を編集します。  
    "**<ACR ログインサーバー名>/cameracapture**" とします。
 
-   <img src="./images/05/vs_input_repositry.jpg" width="480px" />
+   <img src="./images/05/vs_input_repositry.jpg" width="560px" />
 
 6. "cameraCapture" モジュールが追加されたことを確認します。  
 
-   <img src="./images/05/vs_new_module_created.jpg" width="260px" />
+   <img src="./images/05/vs_new_module_created.jpg" width="400px" />
 
 ---
 
@@ -54,11 +54,11 @@
    > Python をインストールしていない環境で main.py を開くと、Visual Studio Code が Python のインストールを勧めてきます。  
    > このハンズオンを実施するためには Python は不要ですが、今後同様の開発をする時のために Python または Anaconda をインストールすることをお勧めします。
    >
-   > <img src="./images/05/vs_ask_install_python.jpg" width="360px" />
+   > <img src="./images/05/vs_ask_install_python.jpg" width="480px" />
 
 2. main.py 全体を [**このリポジトリ内の "source/modules/cameraCapture/main.py"**](../source/modules/cameraCapture/main.py) で置換します。
 
-   <img src="./images/05/vs_replace_mainpy.jpg" width="480px" />
+   <img src="./images/05/vs_replace_mainpy.jpg" width="560px" />
 
 いくつかポイントを紹介します。
 
@@ -82,7 +82,7 @@ IoT Edge の環境変数の取得のサンプルです。ここでは具体的�
 2. 2行目に "**requests**" を追加します。  
    （1行目を削除しないように注意してください）
 
-   <img src="./images/05/vs_edit_requirementstxt.jpg" width="480px" />
+   <img src="./images/05/vs_edit_requirementstxt.jpg" width="560px" />
 
 ---
 
@@ -101,7 +101,7 @@ IoT Edge の環境変数の取得のサンプルです。ここでは具体的�
 
 3. 6枚のテスト画像ファイルを、今回のソリューションの "modules/cameraCapture" フォルダーにコピーします。
 
-   <img src="./images/05/copy_imagefiles.jpg" width="480px" />
+   <img src="./images/05/copy_imagefiles.jpg" width="560px" />
 
 4. "cameraCapture" の "**Dockerfile.amd64**" を開きます。  
    "WORKDIR /app" の下に以下のコードを追加します。
@@ -115,7 +115,7 @@ IoT Edge の環境変数の取得のサンプルです。ここでは具体的�
    ADD ./test_image_5.jpg .
    ```
 
-   <img src="./images/05/vs_edit_dockerfile.jpg" width="480px" />
+   <img src="./images/05/vs_edit_dockerfile.jpg" width="560px" />
 
 ---
 

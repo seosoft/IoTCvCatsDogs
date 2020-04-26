@@ -19,16 +19,16 @@ IoT Edge ソリューションを展開します。
 
 1. Visual Studio Code のエクスプローラーで
 
-   <img src="./images/08/vs_build_and_push_solution.jpg" width="360px" />
+   <img src="./images/08/vs_build_and_push_solution.jpg" width="480px" />
 
 2. [AZURE IOT HUB] で "**IoT Edge デバイス名**" (今回は "CatsDogsEdge") を選択して [**1つの IoT Edge に配置**] を選択します。
 
-   <img src="./images/08/vs_iothub_deploy.jpg" width="360px" />
+   <img src="./images/08/vs_iothub_deploy.jpg" width="480px" />
 
 3. 配置用のマニフェストファイルを選択します。  
    今回は "**config\deployment.amd64.json**" を選択します。
 
-   <img src="./images/08/vs_iothub_deploy_select_configfile.jpg" width="480px" />
+   <img src="./images/08/vs_iothub_deploy_select_configfile.jpg" width="560px" />
 
    > 前の手順ではマニフェストファイルのひな形 (deployment.template.json) を使いました。  
    > 今回は実際のデバイスへの配置なので、"deployment.**amd64**.json" を指定します。
@@ -44,20 +44,20 @@ Azure には IoT Edge ランタイムがインストールされたイメージ�
    [**仮想マシン名**] には任意の名前を入力します。ここでは "**CatsDogsEdgeVm**" とします。  
    [**新しいリソース**] - [**Compute**] - [**Virtual machine**] を選択します。
 
-   <img src="./images/08/azure_create_new_vm.jpg" width="300px" />
+   <img src="./images/08/azure_create_new_vm.jpg" width="400px" />
 
 2. 仮想マシンの作成で [**イメージ**] の [**すべてのパブリックおよびプライベートイメージを参照する**] を選択します。
 
-   <img src="./images/08/azure_new_vm_settings.jpg" width="400px" />
+   <img src="./images/08/azure_new_vm_settings.jpg" width="560px" />
 
 3. イメージ選択では、検索ボックスに "iot edge" と入力して "**Ubuntu Server 17.04 LTS + Azure IoT Edge runtime**" を選択します。
 
-   <img src="./images/08/azure_select_iotedge_image.jpg" width="480px" />
+   <img src="./images/08/azure_select_iotedge_image.jpg" width="560px" />
 
 4. サイズが自動的に "Standard B1ms" に変更されています。  
    その他、適切に設定して仮想マシンを作成します。
 
-   <img src="./images/08/azure_vmsize_b1ms.jpg" width="400px" />
+   <img src="./images/08/azure_vmsize_b1ms.jpg" width="560px" />
 
 5. 仮想マシンが作成されたら、**IP アドレス** をコピーします。
 
@@ -70,7 +70,7 @@ Azure には IoT Edge ランタイムがインストールされたイメージ�
    ```cmd
    ssh <仮想マシンのユーザー名>@<仮想マシンのIPアドレス>
    ```
-   <img src="./images/08/ssh_vm.jpg" width="480px" />
+   <img src="./images/08/ssh_vm.jpg" width="560px" />
 
 2. IoT Edge デバイスで以下のコマンドを順に実行します。
 
@@ -84,7 +84,7 @@ Azure には IoT Edge ランタイムがインストールされたイメージ�
    >
    > 3行目でステータスを表示した後は "q" でプロンプトに戻ります。
 
-   <img src="./images/08/vm_iotedge_command.jpg" width="480px">/
+   <img src="./images/08/vm_iotedge_command.jpg" width="560px">/
 
 3. 以下のコマンドで 4つのモジュールがすべて "**running**" になるのを確認します。  
    すべてのモジュールが起動するまでに最大で数分程度かかるかもしれません。
@@ -93,7 +93,7 @@ Azure には IoT Edge ランタイムがインストールされたイメージ�
    sudo iotedge list
    ```
 
-   <img src="./images/08/vm_iotedge_module_list.jpg" width="480px" />
+   <img src="./images/08/vm_iotedge_module_list.jpg" width="560px" />
 
 4. 以下のコマンドで "**cameraCapture**" のログを確認します。
 
@@ -101,7 +101,7 @@ Azure には IoT Edge ランタイムがインストールされたイメージ�
    iotedge logs cameraCapture -f
    ```
 
-   <img src="./images/08/vm_iotedge_log_camera.jpg" width="480px" />
+   <img src="./images/08/vm_iotedge_log_camera.jpg" width="560px" />
 
 ---
 
@@ -111,15 +111,15 @@ IoT Hub に送信されてくる IoT Edge デバイスのメッセージは Visu
 
 1. Visual Studio Code の [AZURE IOT HUB] で "**IoT Edge デバイス名**" (今回は "CatsDogsEdge") を選択して [**ビルトインエンドポイントのモニターを開始**] を選択します。
 
-   <img src="./images/08/vs_start_buildin_monitor.jpg" width="360px" />
+   <img src="./images/08/vs_start_buildin_monitor.jpg" width="400px" />
 
 2. Visual Studio Code の出力に IoT Edge デバイスのメッセージが表示されることを確認します。
 
-   <img src="./images/08/vs_display_buildin_monitor.jpg" width="480px" />
+   <img src="./images/08/vs_display_buildin_monitor.jpg" width="560px" />
 
    > モニタリングを終了するには Visual Studio Code の [**Stop Monitoring built-in event endpoint**] をクリックします。
    >
-   > <img src="./images/08/vs_stop_buildin_monitor.jpg" width="400px" />
+   > <img src="./images/08/vs_stop_buildin_monitor.jpg" width="480px" />
 
 ---
 

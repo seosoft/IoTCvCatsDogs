@@ -19,7 +19,7 @@ Visual Studio Code の Azure IoT Tools で作成した IoT Edge ソリューシ�
 
 1. Visual Studio Code で "deployment.template.json" を開きます。
 
-   <img src="./images/06/vs_manifestfile.jpg" width="480px" />
+   <img src="./images/06/vs_manifestfile.jpg" width="560px" />
 
 2. "**modules**" セクションの "**SimulatedTemperatureSensor**" をブロックごと削除します。  
    これを削除すると "modules" セクションには、
@@ -29,7 +29,7 @@ Visual Studio Code の Azure IoT Tools で作成した IoT Edge ソリューシ�
   
    の2つのモジュールが残ります。
 
-   <img src ="./images/06/vs_manifest_delete_simtemp_module.jpg" width="480px" />
+   <img src ="./images/06/vs_manifest_delete_simtemp_module.jpg" width="560px" />
 
    > "SimulatedTemperatureSensor" は、IoT Edge ソリューションにデフォルトで含まれているモジュールです。  
    > 文字通り、温度のシミュレートしたデータを定期的に送信するモジュールです。  
@@ -46,7 +46,7 @@ Visual Studio Code の Azure IoT Tools で作成した IoT Edge ソリューシ�
    "createOptions": "{\"Env\":[\"IMAGE_PROCESSING_ENDPOINT=http://classifier/image\"]}"
    ```
 
-   <img src="./images/06/vs_manifest_edit_camera_createoptions.jpg" width="480px" />
+   <img src="./images/06/vs_manifest_edit_camera_createoptions.jpg" width="560px" />
 
 4. "**$edgeHub**" セクションの "**routes**" を以下で置換します。
 
@@ -58,9 +58,9 @@ Visual Studio Code の Azure IoT Tools で作成した IoT Edge ソリューシ�
    },
    ```
 
-   <img src="./images/06/vs_manifest_routes_before.jpg" width="480px" />
+   <img src="./images/06/vs_manifest_routes_before.jpg" width="560px" />
    <br />
-   <img src="./images/06/vs_manifest_routes_after.jpg" width="480px" />
+   <img src="./images/06/vs_manifest_routes_after.jpg" width="560px" />
 
    > ここで分かる通り、IoT Edge モジュールは、ランタイムが持っているルーティングにメッセージを出力したり入力したりすることで、モジュール間および外部との通信を行います。  
    > 実際のメッセージ送受信や通信エラー発生時のリトライなどはランタイムが行ってくれるので、モジュールは必要なメッセージを入出力することに集中できます。
@@ -82,21 +82,21 @@ IoT Edge ソリューションの開発、設定が終わりました。
    docker login -u <ACRユーザー名> -p <ACRパスワード> <ACRログインサーバー>
    ```
 
-   <img src="./images/06/vs_docker_login.jpg" width="480px" />
+   <img src="./images/06/vs_docker_login.jpg" width="560px" />
 
 3. Visual Studio Code のエクスプローラーで "**deployment.tempate.json**" を右クリックして [Build and Push IoT Edge Solution] を選択します。
 
-   <img src="./images/06/vs_build_and_push_solution.jpg" width="360px" />
+   <img src="./images/06/vs_build_and_push_solution.jpg" width="400px" />
 
 4. Docker Desktop でパッケージのビルドが実行され、Azure Container Registry に発行されます。
 
-   <img src="./images/06/vs_building_and_pushing.jpg" width="480px" />
+   <img src="./images/06/vs_building_and_pushing.jpg" width="560px" />
    <br />
-   <img src="./images/06/vs_build_and_push_completed.jpg" width="480px" />
+   <img src="./images/06/vs_build_and_push_completed.jpg" width="560px" />
 
 5. 発行に成功すると、Azure ポータルの Container Registry でもリポジトリが登録されていることが分かります。
 
-   <img src="./images/06/acr_pushed_modules.jpg" width="360px" />
+   <img src="./images/06/acr_pushed_modules.jpg" width="480px" />
 
 ---
 

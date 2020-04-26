@@ -59,8 +59,8 @@ Windows 以外の場合でも Visual Studio Code + Docker Desktop が必要で�
 
 インストール完了後に Visual Studio Code 起動を確認したら、必要に応じて "Japanese Language Pack" をダウンロードします。
 
-<img src="./images/01/vscode_download.jpg" width="480px" />
-<img src="./images/01/vscode_install_japanese_ext.jpg" width="480px" />
+<img src="./images/01/vscode_download.jpg" width="560px" />
+<img src="./images/01/vscode_install_japanese_ext.jpg" width="560px" />
 
 ---
 
@@ -70,11 +70,11 @@ Windows 以外の場合でも Visual Studio Code + Docker Desktop が必要で�
 
 Azure IoT Tools は Visual Studio Code の拡張機能で、Azure IoT (IoT Hub, IoT Edge) 開発に必要なツールです。
 
-<img src="./images/01/vscode_install_iottools.jpg" width="480px" />
+<img src="./images/01/vscode_install_iottools.jpg" width="560px" />
 
 インストールが完了してから Visual Studio Code を再起動すると "**AZURE IOT HUB**" メニューが表示されます。
 
-<img src="./images/01/iottools_installed.jpg" width="480px" />
+<img src="./images/01/iottools_installed.jpg" width="560px" />
 
 ---
 
@@ -84,7 +84,7 @@ IoT Edge モジュールを開発するには、開発用 PC に Docker Desktop 
 
 [Docker Desktop のダウンロード ページ](https://www.docker.com/products/docker-desktop) からダウンロードして、インストールします。
 
-<img src="./images/01/docker_download.jpg" width="480px" />
+<img src="./images/01/docker_download.jpg" width="560px" />
 <img src="./images/01/docker_installing.jpg" width="480px" />
 <img src="./images/01/docker_installed.jpg" width="480px" />
 

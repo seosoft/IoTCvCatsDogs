@@ -33,20 +33,20 @@ IoT Hub はハブに接続する IoT Edge デバイスを一元管理し、IoT E
 
 1. Azure ポータルで "IoT Hub" リソースを新規作成します。
 
-   <img src="./images/07/azure_new_iothub.jpg" width="300px" />
+   <img src="./images/07/azure_new_iothub.jpg" width="360px" />
 
 2. [**価格とスケールティア**] では "**S**" または "**F**" を選択します。  
    選択可能であれば無償の "**F1**" を選択、そうでなければ今回は "**S1**" で十分です。
 
-   <img src="./images/07/azure_new_iothub_settings1.jpg" width="480px" />
+   <img src="./images/07/azure_new_iothub_settings1.jpg" width="560px" />
    <br />
-   <img src="./images/07/azure_new_iothub_settings2.jpg" width="480px" />
+   <img src="./images/07/azure_new_iothub_settings2.jpg" width="560px" />
 
 3. IoT Hub が作成されたら、[**共有アクセスポリシー**] を選択します。  
    あとで使うので共有アクセスポリシーをメモ帳などにコピーしておきます。　　
    今回は簡単のため "**iothubowner**" を選択して "**接続文字列-プライマリキー**" をメモ帳などにコピーしておきます。
 
-   <img src="./images/07/azure_copy_iothub_policy.jpg" width="480px" />
+   <img src="./images/07/azure_copy_iothub_policy.jpg" width="560px" />
 
 ---
 
@@ -59,20 +59,20 @@ IoT Hub はハブに接続する IoT Edge デバイスを一元管理し、IoT E
    > 名前は似ていますが "**IoT デバイス**" と "**IoT Edge**" デバイスとは違います。  
    > IoT デバイスはIoT Edge ランタイムを動作させないものです。
 
-   <img src="./images/07/iothub_add_edgedevice.jpg" width="400px" />
+   <img src="./images/07/iothub_add_edgedevice.jpg" width="480px" />
 
 2. [**デバイス ID**] に名前を入れて保存します。  
    ここでは "**CatsDogsEdge**" とします。
 
-   <img src="./images/07/iothub_save_iotedge.jpg" width="400px" />
+   <img src="./images/07/iothub_save_iotedge.jpg" width="480px" />
 
 3. 新規登録された "**CatsDogsEdge**" を選択します。
 
-   <img src="./images/07/azure_select_edge_device.jpg" width="360px" />
+   <img src="./images/07/azure_select_edge_device.jpg" width="480px" />
 
 4. あとで使用するので [**プライマリ接続文字列**] をメモ帳などにコピーしておきます。  
 
-   <img src="./images/07/azure_iotedge_settings.jpg" width="480px" />
+   <img src="./images/07/azure_iotedge_settings.jpg" width="560px" />
 
    > "CatsDogsEdge" には、現在 2個のモジュールが登録されていることを確認しておきます。
    >
@@ -88,17 +88,17 @@ Visual Studio Code を IoT Hub に接続します。
 
 1. Visual Studio Code で [AZURE IOT HUB] - [Set IoT Hub Connetion String] を選択します。
 
-   <img src="./images/07/vs_set_iothub_connstring.jpg" width="360px" />
+   <img src="./images/07/vs_set_iothub_connstring.jpg" width="480px" />
 
 2. IoT Hub の接続文字列を入力します。
 
    > **IoT Edge デバイスの接続文字列** ではありません。
 
-   <img src="./images/07/vs_input_iothub_connstring.jpg" width="480px" />
+   <img src="./images/07/vs_input_iothub_connstring.jpg" width="560px" />
 
 3. 接続されて IoT Hub および IoT Edge デバイスが見えることを確認します。
 
-   <img src="./images/07/vs_connected_iothub.jpg" width="360px" />
+   <img src="./images/07/vs_connected_iothub.jpg" width="400px" />
 
 ---
 
@@ -108,11 +108,11 @@ IoT Edge ソリューションをローカルで実行できるようにシミ�
 
 1. "IoT Edge デバイス名" (今回は "CatsDogsEdge") を選択して [**Setup IoT Edge Simulator**] を選択します。
 
-   <img src="./images/07/vs_setup_iotedge_simulator.jpg" width="360px" />
+   <img src="./images/07/vs_setup_iotedge_simulator.jpg" width="480px" />
 
 2. ターミナルに "**Setup IoT Edge Simulator Successfully**" が表示されればセットアップ完了です。
 
-   <img src="./images/07/vs_iotedge_simulator_completed.jpg" width="480px" />
+   <img src="./images/07/vs_iotedge_simulator_completed.jpg" width="560px" />
 
 ---
 
@@ -122,34 +122,34 @@ IoT Edge ソリューションをローカル PC 上のエミュレーターで�
 
 1. Visual Studio Code のエクスプローラーで "**deployment.template.json**" を選択して、[**Build and Run IoT Edge Solution in Simulator**] を選択します。
 
-   <img src="./images/07/vs_build_and_run_in_simulator.jpg" width="480px" />
+   <img src="./images/07/vs_build_and_run_in_simulator.jpg" width="560px" />
 
 2. IoT Edge Simulator が起動します。
 
-   <img src="./images/07/vs_starting_iotedge_simulator.jpg" width="480px" />
+   <img src="./images/07/vs_starting_iotedge_simulator.jpg" width="560px" />
 
 3. 各モジュールの出力が表示されます。  
    "classfier" および "cameraCapture" の出力から画像分類の予測結果が分かります。  
    以下の例では "test_image_2.jpg" は "100% 猫である" ことが分かります。
 
-   <img src="./images/07/vs_simulator_predict_1.jpg" width="480px" />
+   <img src="./images/07/vs_simulator_predict_1.jpg" width="560px" />
 
    以下の例では "test_image_1.jpg" は "猫の可能性はほとんどない" ことが分かります。
 
-   <img src="./images/07/vs_simulator_predict_2.jpg" width="480px" />
+   <img src="./images/07/vs_simulator_predict_2.jpg" width="560px" />
 
 4. モジュールの出力は Docker Desktop Dashboard でも確認できます。  
    Docker Desktop のタスクトレーアイコンを右クリックして [**Dashboard**] を開きます。
 
-   <img src="./images/07/open_docker_dashboard.jpg" width="360px" />
+   <img src="./images/07/open_docker_dashboard.jpg" width="480px" />
 
 5. Docker Desktop 上でソリューションの各モジュール（edgeAgent は除く） が動作して売ることが分かります。
 
-   <img src="./images/07/docker_desktop_moduls.jpg" width="480px" />
+   <img src="./images/07/docker_desktop_moduls.jpg" width="560px" />
 
 6. "**cameraCapture**" のログにも結果が出力されています。
 
-   <img src="./images/07/docker_desktop_log.jpg" width="480px" />
+   <img src="./images/07/docker_desktop_log.jpg" width="560px" />
 
 7. シミュレーターを終了するには、Visual Studio Code のターミナルで **Ctrl + C** を押します。
 

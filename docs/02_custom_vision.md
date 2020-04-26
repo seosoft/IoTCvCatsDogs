@@ -21,7 +21,7 @@ Custom Vision の主な特徴は以下の通りです。
 このハンズオンでは分類器の例として、**猫と犬とを分類** するモデルを作成します。  
 教師データとして [Kaggle の Dogs & Cats Images](https://www.kaggle.com/chetankv/dogs-cats-images) を使用します。
 
-<img src="./images/02/kaggle_dogs_cats.jpg" width="360px" />
+<img src="./images/02/kaggle_dogs_cats.jpg" width="480px" />
 
 > データセットには多数の画像が含まれますが、以下の手順では猫・犬の画像それぞれ 30枚を教師データとします。  
 
@@ -37,7 +37,7 @@ Custom Vision の主な特徴は以下の通りです。
    予測のエミューレーションで使用するテストデータもここで取り出しておきます。  
    "dog vs cat\dataset\test_set" 内の "cats" フォルダーおよび "dogs" フォルダーからそれぞれ3枚、合計6枚の画像を展開しておきます。
 
-   <img src="./images/02/dogs_cats_image_zip.jpg" width="360px" />
+   <img src="./images/02/dogs_cats_image_zip.jpg" width="560px" />
 
 3. テストデータについては、"test_image_0.jpg" ～ "test_image_5.jpg" とリネームしておきます。
 
@@ -49,7 +49,7 @@ Custom Vision の主な特徴は以下の通りです。
 
 1. [**Azure ポータル**](https://portal.azure.com/) を開いて [リソースの作成] を選択して、検索ボックスに "custom vision" と入力。続いて、[Custom Vision] を選択。  
 
-   <img src="./images/02/az_create_customvision.jpg" width="240px" />
+   <img src="./images/02/az_create_customvision.jpg" width="360px" />
 
 2. 今回はトレーニングした学習モデルをエクスポートして使用するので、クラウドでの予測は不要です。  
 
@@ -58,7 +58,7 @@ Custom Vision の主な特徴は以下の通りです。
    - [トレーニング価格レベル] は選択可能なら "F0" を選択、そうでなければ "S0" を選択します。
 
    <br />
-   <img src="./images/02/az_customvision_settings.jpg" width="480px" />
+   <img src="./images/02/az_customvision_settings.jpg" width="560px" />
 
 ---
 
@@ -78,7 +78,7 @@ Custom Vision の主な特徴は以下の通りです。
    |Export Capabilities|Basic platform|Docker ファイルエクスポートは "Basic platform"|
 
    <br />
-   <img src="./images/02/cv_new_project.jpg" width="480px" />
+   <img src="./images/02/cv_new_project.jpg" width="560px" />
 
 ---
 
@@ -88,20 +88,20 @@ Custom Vision の主な特徴は以下の通りです。
 
 1. [**Add images**] をクリックして、教師データの猫のデータを選択します。
 
-   <img src="./images/02/cv_add_images.jpg" width="360px" />
+   <img src="./images/02/cv_add_images.jpg" width="480px" />
 
 2. タグとして "**Cat**" と入力して [Upload 30 files] をクリックします。
 
-   <img src="./images/02/cv_add_cats_images.jpg" width="480px" />
+   <img src="./images/02/cv_add_cats_images.jpg" width="560px" />
 
 3. [Add Images] をクリックして、教師データの犬のデータを選択します。  
    タグとして "**Dog**" と入力して [Upload 30 files] をクリックします。
 
-   <img src="./images/02/cv_add_dogs_images.jpg" width="480px" />
+   <img src="./images/02/cv_add_dogs_images.jpg" width="560px" />
 
 4. 合計 60枚の画像ファイルがタグ付けされてアップロードされたことを確認します。
 
-   <img src="./images/02/cv_all_images_uploaded.jpg" width="240px" />
+   <img src="./images/02/cv_all_images_uploaded.jpg" width="360px" />
 
 ---
 
@@ -111,16 +111,16 @@ Custom Vision の主な特徴は以下の通りです。
 
 1. [**Train**] をクリックして学習を開始します。
 
-   <img src="./images/02/cv_train.jpg" width="480px" />
+   <img src="./images/02/cv_train.jpg" width="560px" />
 
 2. [Training Types] として今回は "Quick Training" を選択して [Train] をクリックします。
 
-   <img src="./images/02/cv_confirm_train.jpg" width="360px" />
+   <img src="./images/02/cv_confirm_train.jpg" width="500px" />
 
 3. 学習の結果が表示されます。  
    以下の図だと、92% 程度の正確性 (猫・犬を92%程度正しく分類できる) のモデルであることが分かります。
 
-   <img src="./images/02/cv_performance.jpg" width="480px" />
+   <img src="./images/02/cv_performance.jpg" width="560px" />
 
 Custom Vision では、これだけで画像分類器が完成です。
 
@@ -135,19 +135,19 @@ Custom Vision の学習モデルは非常に簡単に作れたので、続いて
 
 1. [Performances] の [**Export**] をクリックします。
 
-   <img src="./images/02/cv_export.jpg" width="400px" />
+   <img src="./images/02/cv_export.jpg" width="560px" />
 
 2. エクスポートのフォーマット選択（プラットフォームの選択）で "**Dockerfile**" を選択します。
 
-   <img src="./images/02/cv_export_dockerfile.jpg" width="320px" />
+   <img src="./images/02/cv_export_dockerfile.jpg" width="400px" />
 
 3. プラットフォームとして "**Linux**" を選択します。
 
-   <img src="./images/02/cv_export_docker_linux.jpg" width="400px" />
+   <img src="./images/02/cv_export_docker_linux.jpg" width="480px" />
 
 4. [Download] をクリックします。
 
-   <img src="./images/02/cv_download_dockerfile.jpg" width="400px" />
+   <img src="./images/02/cv_download_dockerfile.jpg" width="480px" />
 
 5. ダウンロードされた ZIP ファイルの中身を確認してみます。  
    - "app" フォルダー
@@ -156,7 +156,7 @@ Custom Vision の学習モデルは非常に簡単に作れたので、続いて
    - README.txt
 
    <br />
-   <img src="./images/02/cv_export_zipfile.jpg" width="480px" />
+   <img src="./images/02/cv_export_zipfile.jpg" width="560px" />
 
 ---
 

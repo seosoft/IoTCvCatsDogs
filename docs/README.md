@@ -13,11 +13,11 @@
 7. [IoT Hub / Edge デバイスの準備とソリューションのローカル実行](./07_create_iothub_edgedevice.md)
 8. [IoT Edge デバイスでソリューションを実行する](./08_run_on_edgedevice.md)
 
-<img src="../docs/images/customvision_top_image.jpg" width="360px" />
+<img src="../docs/images/customvision_top_image.jpg" width="400px" />
 <br />
-<img src="../docs/images/iotedge_top_image.jpg" width="360px" />
+<img src="../docs/images/iotedge_top_image.jpg" width="400px" />
 <br />
-<img src="../docs/images/08/vs_display_buildin_monitor.jpg" width="480px" />
+<img src="../docs/images/08/vs_display_buildin_monitor.jpg" width="560px" />
 
 ---
 
