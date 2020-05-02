@@ -92,5 +92,5 @@ Custom Vision は、学習モデルと Web サービスとして動作するコ�
 
 次のステップでは、ソリューションにカメラモジュール（今回はカメラシミュレーター）
 
-[前に戻る](./03_create_edgeapp.md) | [次に進む](./05_create_cameramodule.md)
+[前に戻る](./03_create_edgeapp.md) | [次に進む](./05_create_cameramodule.md)  
 [目次に戻る](../README.md)

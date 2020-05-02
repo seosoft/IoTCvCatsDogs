@@ -165,5 +165,5 @@ Custom Vision の学習モデルは非常に簡単に作れたので、続いて
 
 次から Visual Studio Code を使って、IoT Edge デバイスで動作するアプリケーションを作っていきます。
 
-[前に戻る](./01_install.md) | [次に進む](./03_create_edgeapp.md)
+[前に戻る](./01_install.md) | [次に進む](./03_create_edgeapp.md)  
 [目次に戻る](../README.md)
