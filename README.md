@@ -8,12 +8,13 @@ Raspberry PI などの物理デバイスを使用せずに、**カメラのシ�
 
 このリポジトリは以下の内容を含みます。
 
-- [**開発手順のハンズオン**](./docs/README.md)
+- [**開発手順のハンズオン資料**](./docs/README.md)
 - [**開発完了時点のソースコード**](./source/README.md)
 
-実際に自分でアプリケーションを開発するには、[このリポジトリのハンズオン](./docs/README.md) を参照してください。
+実際に自分でアプリケーションを開発するには、[このリポジトリのハンズオン資料](./docs/README.md) を参照して実際に操作してください。  
+操作に行き詰った場合には [ソースコード一式](./source/README.md) がヒントになるかもしれません。
 
-Custom Vision や Azure IoT の概要を知りたい場合、または開発の手順を短時間で直感的に追いたい場合は、別途用意した [**セッション資料**](https://www.slideshare.net/seosoft/azure-iot-edge-custom-vision) を参照してください。
+なおCustom Vision や Azure IoT の概要を知りたい場合や開発の手順を短時間で直感的に追いたい場合は、別途用意した [**セッション資料**](https://www.slideshare.net/seosoft/azure-iot-edge-custom-vision) を参照してください。
 
 ---
 
@@ -36,5 +37,5 @@ Custom Vision や Azure IoT の概要を知りたい場合、または開発の�
 
 ---
 
-Copyright (C) 2020 Seosoft All rights reserved.  
+Copyright (C) 2020-2021 Seosoft All rights reserved.  
 本コンテンツの著作権、および本コンテンツ中に出てくる商標権、団体名、ロゴ、製品、サービスなどはそれぞれ、各権利保有者に帰属します。

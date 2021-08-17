@@ -13,11 +13,15 @@
 7. [IoT Hub / Edge デバイスの準備とソリューションのローカル実行](./07_create_iothub_edgedevice.md)
 8. [IoT Edge デバイスでソリューションを実行する](./08_run_on_edgedevice.md)
 
+<br />
+
 <img src="../docs/images/customvision_top_image.jpg" width="400px" />
 <br />
 <img src="../docs/images/iotedge_top_image.jpg" width="400px" />
 <br />
 <img src="../docs/images/08/vs_display_buildin_monitor.jpg" width="560px" />
+
+<br />
 
 ---
 
@@ -29,8 +33,10 @@
 
 をしました。
 
-このハンズオンでは物理デバイスを使用せずに **カメラのシミュレーター**を使います。  
-物理デバイスを持っていなくても全ての手順を実行することができ、アプリケーション開発の流れと、Costom Vision および IoT Edge、Azure IoT の基礎を理解できます。
+<br />
+
+> このハンズオンでは物理デバイスを使用せずに **カメラのシミュレーター**を使います。  
+> 物理デバイスを持っていなくても全ての手順を実行することができ、アプリケーション開発の流れと、Costom Vision および IoT Edge、Azure IoT の基礎を理解できます。
 
 ---
 
