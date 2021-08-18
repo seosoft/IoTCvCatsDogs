@@ -10,27 +10,34 @@ Azure IoT Edge + Custom Vision アプリケーションを開発するには、�
 [3. Docker Desktop](#docker-desktop)  
 [4. (オプション) Anaconda](#anaconda)
 
+<br />
+
 > ここでは Windows 環境のみ記載しています。  
 > Windows 以外の OS での動作確認は行っていません。
+
+<br />
 
 ---
 
 ## 開発用 PC の条件
 
-IoT Edge 開発では **Docker Desktop** が動作する必要があります。
+IoT Edge 開発では [**Docker Desktop**](https://www.docker.com/products/docker-desktop) が動作する必要があります。
 
 Windows 10 の場合は
 
-- Hyper-V が動作する PC
-- Windows 10 Pro 以上（Home は使用不可）
+- Hyper-V または [**WSL2**](https://docs.microsoft.com/ja-jp/windows/wsl/install-win10) が動作する PC
 - メモリ 16GB 程度以上
 
-が必要です。  
-開発時には Visual Studio Code および Docker Desktop が同時に起動している必要があるため、マシンスペックによっても開発が困難または不可能なことがあります。
+が必要です。
 
+開発時には Visual Studio Code および Docker Desktop (+ IoT Edge Simulator) が同時に起動している必要があるため、マシンスペックによっても開発が困難または不可能なことがあります。
 Windows 以外の場合でも Visual Studio Code + Docker Desktop が必要です。こちらも十分なスペックのマシンが必要です。
 
-> マシンを用意できない場合は、**Azure 上に仮想マシンを作成** してハンズオンを進めることができます。
+<br />
+
+> Windows 10 で Docker Desktop を実行するために必要な条件は [**docker docs**](https://docs.docker.com/desktop/windows/install/) に書いてあります。  
+>
+> ローカル PC で実行できない場合は、**Azure 上に仮想マシンを作成** してハンズオンを進めることができます。
 >
 > 仮想マシンで Hyper-V を有効にするには [**Dv3 または Ev3 の仮想マシン**](https://docs.microsoft.com/ja-jp/azure/virtual-machines/windows/nested-virtualization) が必要です。  
 > "Standard D4s_v3" などの Windows 10 仮想マシンを作成して、Visual Studio Code のインストールから実施してください。
@@ -51,6 +58,8 @@ Windows 以外の場合でも Visual Studio Code + Docker Desktop が必要で�
 >
 > もし Docker Desktop の起動時にエラーメッセージが表示されるようであれば、一度 Docker Desktop をアンインストールしてから上記の Hyper-V 有効化コマンドを実行してください。
 
+<br />
+
 ---
 
 ## Visual Studio Code
@@ -59,22 +68,34 @@ Windows 以外の場合でも Visual Studio Code + Docker Desktop が必要で�
 
 インストール完了後に Visual Studio Code 起動を確認したら、必要に応じて "Japanese Language Pack" をダウンロードします。
 
+<br />
+
 <img src="./images/01/vscode_download.jpg" width="560px" />
 <img src="./images/01/vscode_install_japanese_ext.jpg" width="560px" />
+
+<br />
 
 ---
 
 ## Azure IoT Tools
 
 [Azure IoT Tools](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.azure-iot-tools) をインストールします。  
+VSCode の [**拡張機能**] を開き、"**azure iot tools**" などで検索してインストールします。
 
 Azure IoT Tools は Visual Studio Code の拡張機能で、Azure IoT (IoT Hub, IoT Edge) 開発に必要なツールです。
 
+<br />
+
 <img src="./images/01/vscode_install_iottools.jpg" width="560px" />
 
-インストールが完了してから Visual Studio Code を再起動すると "**AZURE IOT HUB**" メニューが表示されます。
+<br />
+
+インストールが完了しすると "**AZURE IOT HUB**" メニューが表示されます。
+<br />
 
 <img src="./images/01/iottools_installed.jpg" width="560px" />
+
+<br />
 
 ---
 
@@ -84,13 +105,21 @@ IoT Edge モジュールを開発するには、開発用 PC に Docker Desktop 
 
 [Docker Desktop のダウンロード ページ](https://www.docker.com/products/docker-desktop) からダウンロードして、インストールします。
 
+<br />
+
 <img src="./images/01/docker_download.jpg" width="560px" />
 <img src="./images/01/docker_installing.jpg" width="480px" />
 <img src="./images/01/docker_installed.jpg" width="480px" />
 
+<br />
+
 OS の再起動後に Docker Desktop が起動すればインストール完了です。
 
+<br />
+
 <img src="./images/01/docker_running.jpg" width="480px" />
+
+<br />
 
 ---
 
@@ -99,7 +128,10 @@ OS の再起動後に Docker Desktop が起動すればインストール完了�
 Anaconda または Python は、このハンズオンでは必須ではありません。  
 
 ただし同様のアプリケーションを開発する場合は、Python のコードを編集したりデバッグしたりする必要が出てきます。  
-ここで一緒に [インストール](https://www.anaconda.com/distribution/#download-section) することをお勧めします。
+このタイミングで Anaconda または Python をインストールすることをお勧めします。
+
+Anaconda は [Anaconda のダウンロードページ](https://www.anaconda.com/distribution/#download-section) からダウンロードできます。  
+Python は Windows ストアで "Python" で検索するか、[Python.org のダウンロードページ](https://www.python.org/downloads/) からダウンロードしてください。
 
 ---
 
@@ -108,4 +140,4 @@ Anaconda または Python は、このハンズオンでは必須ではありま
 次は Custom Vision で画像分類器を作成します。
 
 [次に進む](./02_custom_vision.md)  
-[目次に戻る](../README.md)
+[目次に戻る](./README.md)
