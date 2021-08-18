@@ -111,4 +111,4 @@ IoT Edge ソリューションの開発、設定が終わりました。
 をまとめて行います。
 
 [前に戻る](./05_create_cameramodule.md) | [次に進む](./07_create_iothub_edgedevice.md)  
-[目次に戻る](../README.md)
+[目次に戻る](./README.md)

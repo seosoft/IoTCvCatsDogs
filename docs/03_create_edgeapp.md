@@ -125,4 +125,4 @@ Visual Studio Code で IoT Edge ソリューションを作成します。
 次のステップから、コードの追加・編集などを行ってアプリケーションを開発していきます。
 
 [前に戻る](./02_custom_vision.md) | [次に進む](./04_edit_classfier.md)  
-[目次に戻る](../README.md)
+[目次に戻る](./README.md)

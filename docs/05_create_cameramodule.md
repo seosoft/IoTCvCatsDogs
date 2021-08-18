@@ -124,4 +124,4 @@ IoT Edge の環境変数の取得のサンプルです。ここでは具体的�
 次のステップでは、Docker イメージをビルドして Azure Container Registry に発行します。
 
 [前に戻る](./04_edit_classfier.md) | [次に進む](./06_upload_to_acr.md)  
-[目次に戻る](../README.md)
+[目次に戻る](./README.md)

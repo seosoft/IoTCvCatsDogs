@@ -161,4 +161,4 @@ IoT Edge ソリューションをローカル PC 上のエミュレーターで�
 次のステップでは IoT Edge デバイスを作成して、そのデバイス上で IoT Edge ソリューションを実行します。
 
 [前に戻る](./06_upload_to_acr.md) | [次に進む](./08_run_on_edgedevice.md)  
-[目次に戻る](../README.md)
+[目次に戻る](./README.md)

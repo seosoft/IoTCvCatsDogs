@@ -138,4 +138,4 @@ IoT Hub に送信されてくる IoT Edge デバイスのメッセージは Visu
 おつかれさまでした。
 
 [前に戻る](./07_create_iothub_edgedevice.md)  
-[目次に戻る](../README.md)
+[目次に戻る](./README.md)
