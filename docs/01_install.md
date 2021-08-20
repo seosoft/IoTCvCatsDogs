@@ -36,7 +36,9 @@ Windows 以外の場合でも Visual Studio Code + Docker Desktop が必要で�
 <br />
 
 > Windows 10 で Docker Desktop を実行するために必要な条件は [**docker docs**](https://docs.docker.com/desktop/windows/install/) に書いてあります。  
->
+
+<br />
+
 > ローカル PC で実行できない場合は、**Azure 上に仮想マシンを作成** してハンズオンを進めることができます。
 >
 > 仮想マシンで Hyper-V を有効にするには [**Dv3 または Ev3 の仮想マシン**](https://docs.microsoft.com/ja-jp/azure/virtual-machines/windows/nested-virtualization) が必要です。  
@@ -66,12 +68,9 @@ Windows 以外の場合でも Visual Studio Code + Docker Desktop が必要で�
 
 [Visual Studio Code](https://code.visualstudio.com/) で Visual Studio Code のインストーラーをダウンロードします。
 
-インストール完了後に Visual Studio Code 起動を確認したら、必要に応じて "Japanese Language Pack" をダウンロードします。
-
 <br />
 
 <img src="./images/01/vscode_download.jpg" width="560px" />
-<img src="./images/01/vscode_install_japanese_ext.jpg" width="560px" />
 
 <br />
 
@@ -125,7 +124,7 @@ OS の再起動後に Docker Desktop が起動すればインストール完了�
 
 ## Anaconda
 
-Anaconda または Python は、このハンズオンでは必須ではありません。  
+Anaconda または Python は、このハンズオンでは不要です。  
 
 ただし同様のアプリケーションを開発する場合は、Python のコードを編集したりデバッグしたりする必要が出てきます。  
 このタイミングで Anaconda または Python をインストールすることをお勧めします。

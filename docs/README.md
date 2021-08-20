@@ -38,7 +38,9 @@
 > このハンズオンでは物理デバイスを使用せずに **カメラのシミュレーター**を使います。  
 > 物理デバイスを持っていなくても全ての手順を実行することができ、アプリケーション開発の流れと、Costom Vision および IoT Edge、Azure IoT の基礎を理解できます。
 
+<br />
+
 ---
 
-Copyright (C) 2020 Seosoft All rights reserved.  
+Copyright (C) 2020-2021 Seosoft All rights reserved.  
 本コンテンツの著作権、および本コンテンツ中に出てくる商標権、団体名、ロゴ、製品、サービスなどはそれぞれ、各権利保有者に帰属します。
