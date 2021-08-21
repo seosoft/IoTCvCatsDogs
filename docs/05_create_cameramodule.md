@@ -3,13 +3,19 @@
 [前のステップ](./04_edit_classfier.md) で、画像分類の予測サービスモジュールを編集しました。  
 予測サービスモジュールは Custom Vision からエクスポートしたファイルを活用するため、非常に簡単に作業できました。
 
-このステップでは、**カメラモジュールを作成** します。  
-カメラモジュールはシミュレーターなので、物理デバイスは不要です。Azure と PC だけで実現できます。
+このステップでは **カメラモジュールを作成** します。
+
+> カメラモジュールはシミュレーターなので物理デバイスは不要です。Azure と PC だけで実現できます。  
+> (PC のカメラも使用しません)
+
+<br />
 
 [1. カメラモジュールの追加](#%e3%82%ab%e3%83%a1%e3%83%a9%e3%83%a2%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab%e3%81%ae%e8%bf%bd%e5%8a%a0)  
 [2. main.py の編集](#mainpy-%e3%81%ae%e7%b7%a8%e9%9b%86)  
 [3. 使用するライブラリの追加](#%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%81%ae%e8%bf%bd%e5%8a%a0)  
 [4. テスト画像の追加](#%e3%83%86%e3%82%b9%e3%83%88%e7%94%bb%e5%83%8f%e3%81%ae%e8%bf%bd%e5%8a%a0)
+
+<br />
 
 ---
 
@@ -21,44 +27,60 @@
 
    <img src="./images/05/vs_add_edge_module.jpg" width="560px" />
 
+<br />
+
 2. [**Select Deployment Template file**] ではデフォルトで表示されている "**deployment.template.json**" を選択します。
 
    <img src="./images/05/vs_select_deployment_template.jpg" width="560px" />
+
+<br />
 
 3. [**Selct Module Template**] では "**Python Module**" を選択します。
 
    <img src="./images/05/vs_select_module_template.jpg" width="560px" />
 
+<br />
+
 4. モジュール名を入力します。今回は "**cameraCapture**" とします。
 
    <img src="./images/05/vs_new_edge_module_name.jpg" width="560px" />
+
+<br />
 
 5. [**Provide Docker Image Repository for the Module**] を編集します。  
    "**<ACR ログインサーバー名>/cameracapture**" とします。
 
    <img src="./images/05/vs_input_repositry.jpg" width="560px" />
 
+<br />
+
 6. "cameraCapture" モジュールが追加されたことを確認します。  
 
-   <img src="./images/05/vs_new_module_created.jpg" width="400px" />
+   <img src="./images/05/vs_new_module_created.jpg" width="280px" />
+
+<br />
 
 ---
 
 ## main.py の編集
 
-モジュールの処理本体である main.py を編集します。
+モジュールの処理本体である **main.py** を編集します。
+
+<br />
 
 1. "**cameraCapture**" の "**main.py**" を開きます。  
    （"classifier" の main.py ではありません）
 
-   > Python をインストールしていない環境で main.py を開くと、Visual Studio Code が Python のインストールを勧めてきます。  
-   > このハンズオンを実施するためには Python は不要ですが、今後同様の開発をする時のために Python または Anaconda をインストールすることをお勧めします。
-   >
-   > <img src="./images/05/vs_ask_install_python.jpg" width="480px" />
+   > main.py を開くと Visual Studio Code が Python 関連の拡張機能のインストールを勧めてくるかもしれません。  
+   > このハンズオンを実施するためには不要ですが、ここでインストールしても問題ありません。
+
+<br />
 
 2. main.py 全体を [**このリポジトリ内の "source/modules/cameraCapture/main.py"**](../source/modules/cameraCapture/main.py) で置換します。
 
-   <img src="./images/05/vs_replace_mainpy.jpg" width="560px" />
+   <img src="./images/05/vs_replace_mainpy.jpg" width="480px" />
+
+<br />
 
 いくつかポイントを紹介します。
 
@@ -66,10 +88,13 @@
 IoT Hub (IoT Edge デバイスとクラウドとのゲートウェイとなるサービス) にメッセージを送信します。それと合わせて、モジュール自体のログに予測に使用したファイル名を出力します。
 
 - 58行目付近 (main の while ループ):  
-ファイル名を決めて、classifier Web サービスに対して画像分類予測のリクエストを送信します。結果は send_to_hub に渡します。画像は 10秒毎に別の画像で予測します。
+ファイル名を決めて、classifier Web サービスに対して画像分類予測のリクエストを送信します。結果は send_to_hub に渡します。画像は 10秒毎に別の画像で予測します。  
+(6枚の画像を順に使用するコードです)
 
 - 73行目付近 (IMAGE_PROCESSING_ENDPOINT の代入):  
 IoT Edge の環境変数の取得のサンプルです。ここでは具体的に ciassifier Web サービスの URL を取得しています。
+
+<br />
 
 ---
 
@@ -83,6 +108,8 @@ IoT Edge の環境変数の取得のサンプルです。ここでは具体的�
    （1行目を削除しないように注意してください）
 
    <img src="./images/05/vs_edit_requirementstxt.jpg" width="560px" />
+
+<br />
 
 ---
 
@@ -99,9 +126,13 @@ IoT Edge の環境変数の取得のサンプルです。ここでは具体的�
 
    <img src="./images/05/test_images.jpg" width="480px" />
 
+<br />
+
 3. 6枚のテスト画像ファイルを、今回のソリューションの "modules/cameraCapture" フォルダーにコピーします。
 
    <img src="./images/05/copy_imagefiles.jpg" width="560px" />
+
+<br />
 
 4. "cameraCapture" の "**Dockerfile.amd64**" を開きます。  
    "WORKDIR /app" の下に以下のコードを追加します。
@@ -116,6 +147,8 @@ IoT Edge の環境変数の取得のサンプルです。ここでは具体的�
    ```
 
    <img src="./images/05/vs_edit_dockerfile.jpg" width="560px" />
+
+<br />
 
 ---
 
