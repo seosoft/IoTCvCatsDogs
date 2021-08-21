@@ -1,0 +1,6 @@
+// .env ファイルのひな形
+// アプリケーションを実行するには、このファイルを ".env" にリネームした上で、ユーザー名、パスワードに適切なものを設定してください。
+// また先頭3行のコメントは削除してください。
+
+CONTAINER_REGISTRY_USERNAME_catsdogsreg=<ACRユーザー名>
+CONTAINER_REGISTRY_PASSWORD_catsdogsreg=<ACRパスワード>
