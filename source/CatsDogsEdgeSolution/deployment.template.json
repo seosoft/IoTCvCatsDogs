@@ -76,6 +76,16 @@
               "image": "mcr.microsoft.com/azureiotedge-simulated-temperature-sensor:1.0",
               "createOptions": {}
             }
+          },
+          "cameraCapture": {
+            "version": "1.0",
+            "type": "docker",
+            "status": "running",
+            "restartPolicy": "always",
+            "settings": {
+              "image": "${MODULES.cameraCapture}",
+              "createOptions": {}
+            }
           }
         }
       }
@@ -85,7 +95,8 @@
         "schemaVersion": "1.2",
         "routes": {
           "classifierToIoTHub": "FROM /messages/modules/classifier/outputs/* INTO $upstream",
-          "sensorToclassifier": "FROM /messages/modules/SimulatedTemperatureSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/classifier/inputs/input1\")"
+          "sensorToclassifier": "FROM /messages/modules/SimulatedTemperatureSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/classifier/inputs/input1\")",
+          "cameraCaptureToIoTHub": "FROM /messages/modules/cameraCapture/outputs/* INTO $upstream"
         },
         "storeAndForwardConfiguration": {
           "timeToLiveSecs": 7200
