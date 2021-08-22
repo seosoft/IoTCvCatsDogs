@@ -67,16 +67,6 @@
               "createOptions": {}
             }
           },
-          "SimulatedTemperatureSensor": {
-            "version": "1.0",
-            "type": "docker",
-            "status": "running",
-            "restartPolicy": "always",
-            "settings": {
-              "image": "mcr.microsoft.com/azureiotedge-simulated-temperature-sensor:1.0",
-              "createOptions": {}
-            }
-          },
           "cameraCapture": {
             "version": "1.0",
             "type": "docker",
@@ -84,7 +74,7 @@
             "restartPolicy": "always",
             "settings": {
               "image": "${MODULES.cameraCapture}",
-              "createOptions": {}
+              "createOptions": "{\"Env\":[\"IMAGE_PROCESSING_ENDPOINT=http://classifier/image\"]}"
             }
           }
         }
@@ -94,9 +84,7 @@
       "properties.desired": {
         "schemaVersion": "1.2",
         "routes": {
-          "classifierToIoTHub": "FROM /messages/modules/classifier/outputs/* INTO $upstream",
-          "sensorToclassifier": "FROM /messages/modules/SimulatedTemperatureSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/classifier/inputs/input1\")",
-          "cameraCaptureToIoTHub": "FROM /messages/modules/cameraCapture/outputs/* INTO $upstream"
+          "CameraCaptureToIoTHub": "FROM /messages/modules/cameraCapture/outputs/* INTO $upstream"
         },
         "storeAndForwardConfiguration": {
           "timeToLiveSecs": 7200
