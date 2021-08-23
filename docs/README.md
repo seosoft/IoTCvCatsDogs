@@ -16,11 +16,11 @@
 
 <br />
 
-<img src="../docs/images/customvision_top_image.jpg" width="560px" />
+<img src="./images/customvision_top_image.jpg" width="560px" />
 <br />
-<img src="../docs/images/07/vs_starting_iotedge_simulator.jpg" width="560px" />
+<img src="./images/07/vs_starting_iotedge_simulator.jpg" width="560px" />
 <br />
-<img src="../docs/images/09/vs_display_buildin_monitor.jpg" width="560px" />
+<img src="./images/09/vs_display_buildin_monitor.jpg" width="560px" />
 
 <br />
 
