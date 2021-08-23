@@ -214,7 +214,8 @@ IoT Edge ソリューションをローカル PC 上のエミュレーターで�
 以上で IoT Hub 作成、IoT Edge デバイス登録の手順が分かりました。  
 またローカル PC 上のシミュレーターで IoT Edge ソリューションの実行方法が分かりました。
 
-次のステップでは IoT Edge デバイスを作成して、そのデバイス上で IoT Edge ソリューションを実行します。
+ 続いて IoT Edge デバイスを作成して、そのデバイス上で IoT Edge ソリューションを実行します。  
+ 次のステップでは IoT Edge デバイスとして使用する Linux 仮想マシンを Azure 上に作成します。
 
-[前に戻る](./06_upload_to_acr.md) | [次に進む](./08_run_on_edgedevice.md)  
+[前に戻る](./06_upload_to_acr.md) | [次に進む](./08_prepare_edgedevice.md)  
 [目次に戻る](./README.md)

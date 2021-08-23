@@ -11,7 +11,8 @@
 5. [カメラモジュールの作成](./05_create_cameramodule.md)
 6. [Container Registry にモジュールをアップロード](./06_upload_to_acr.md)
 7. [IoT Hub / Edge デバイスの準備とソリューションのローカル実行](./07_create_iothub_edgedevice.md)
-8. [IoT Edge デバイスでソリューションを実行する](./08_run_on_edgedevice.md)
+9. [IoT Edge デバイスを作成する](./08_prepare_edgedevice.md)
+9. [IoT Edge デバイスでソリューションを実行する](./09_run_on_edgedevice.md)
 
 <br />
 
