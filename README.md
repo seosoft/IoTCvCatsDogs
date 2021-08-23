@@ -11,10 +11,12 @@ Raspberry PI などの物理デバイスを使用せずに、**カメラのシ�
 - [**開発手順のハンズオン資料**](./docs/README.md)
 - [**開発完了時点のソースコード**](./source/README.md)
 
-実際に自分でアプリケーションを開発するには、[このリポジトリのハンズオン資料](./docs/README.md) を参照して実際に操作してください。  
+実際に自分でアプリケーションを開発するには [このリポジトリのハンズオン資料](./docs/README.md) を参照して実際に操作してください。  
 操作に行き詰った場合には [ソースコード一式](./source/README.md) がヒントになるかもしれません。
 
 なおCustom Vision や Azure IoT の概要を知りたい場合や開発の手順を短時間で直感的に追いたい場合は、別途用意した [**セッション資料**](https://www.slideshare.net/seosoft/azure-iot-edge-custom-vision) を参照してください。
+
+<br />
 
 ---
 
@@ -24,6 +26,7 @@ Raspberry PI などの物理デバイスを使用せずに、**カメラのシ�
 <br />
 <img src="./docs/images/08/vs_display_buildin_monitor.jpg" width="480px" />
 
+<br />
 
 このアプリケーションは、[**勝手に勉強会** (2020年4月19日 開催)](https://katte.connpass.com/event/173288/) の説明・デモで使用したものです。
 

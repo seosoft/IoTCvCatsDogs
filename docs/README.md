@@ -11,15 +11,16 @@
 5. [カメラモジュールの作成](./05_create_cameramodule.md)
 6. [Container Registry にモジュールをアップロード](./06_upload_to_acr.md)
 7. [IoT Hub / Edge デバイスの準備とソリューションのローカル実行](./07_create_iothub_edgedevice.md)
-8. [IoT Edge デバイスでソリューションを実行する](./08_run_on_edgedevice.md)
+9. [IoT Edge デバイスを作成する](./08_prepare_edgedevice.md)
+9. [IoT Edge デバイスでソリューションを実行する](./09_run_on_edgedevice.md)
 
 <br />
 
-<img src="../docs/images/customvision_top_image.jpg" width="400px" />
+<img src="../docs/images/customvision_top_image.jpg" width="560px" />
 <br />
-<img src="../docs/images/iotedge_top_image.jpg" width="400px" />
+<img src="../docs/images/07/vs_starting_iotedge_simulator.jpg" width="560px" />
 <br />
-<img src="../docs/images/08/vs_display_buildin_monitor.jpg" width="560px" />
+<img src="../docs/images/09/vs_display_buildin_monitor.jpg" width="560px" />
 
 <br />
 
@@ -38,7 +39,9 @@
 > このハンズオンでは物理デバイスを使用せずに **カメラのシミュレーター**を使います。  
 > 物理デバイスを持っていなくても全ての手順を実行することができ、アプリケーション開発の流れと、Costom Vision および IoT Edge、Azure IoT の基礎を理解できます。
 
+<br />
+
 ---
 
-Copyright (C) 2020 Seosoft All rights reserved.  
+Copyright (C) 2020-2021 Seosoft All rights reserved.  
 本コンテンツの著作権、および本コンテンツ中に出てくる商標権、団体名、ロゴ、製品、サービスなどはそれぞれ、各権利保有者に帰属します。

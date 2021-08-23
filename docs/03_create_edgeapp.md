@@ -10,9 +10,13 @@
 [6. マニフェストファイルの更新](#%e3%83%9e%e3%83%8b%e3%83%95%e3%82%a7%e3%82%b9%e3%83%88%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e6%9b%b4%e6%96%b0)  
 [7. ソリューションの設定](#%e3%82%bd%e3%83%aa%e3%83%a5%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e8%a8%ad%e5%ae%9a)
 
+<br />
+
 IoT Edge デバイスで動作するモジュール（独立した機能を持つプログラムの単位）は、[**Azure Container Registry**](https://azure.microsoft.com/ja-jp/services/container-registry/) に対して、Docker イメージの形でアップロードして管理します。
 
 このセクションでは、Container Registry の作成から IoT Edge ソリューションの作成まで行います。
+
+<br />
 
 ---
 
@@ -22,25 +26,29 @@ IoT Edge デバイスで動作するモジュール（独立した機能を持�
 
    <img src="./images/03/acr_create.jpg" width="360px" />
 
+<br />
+
 2. 作成のための情報を入力・選択します。  
 
-   - [**レジストリ名**] は以下では "catsdogsreg" としていますが、**一意な名前** が求められるため、自分の名前や日付を組み合わせるなど適宜変更してください。
-   - [**管理者ユーザー**] は "**有効**" にします。これはあとで Docker イメージのアップロードするためにログインする必要があるため。  
-   - [**SKU**] は今回は "**Basic**" で十分です。これは今回はリポジトリは1個でいいため。
+   |項目|設定値|説明
+   |---|---|---|
+   |リソースグループ|Custom Vision を作成したリソースグループ| |
+   |レジストリ名|任意、以下では "**catsdogsreg**" |**一意な名前** が求められるため、自分の名前や日付を組み合わせるなど適宜変更|
+   |SKU|Basic| |
 
    <br />
    <img src="./images/03/acr_create_settings.jpg" width="560px" />
 
-3. Container Registry が作成されたら、[**アクセスキー**] で以下を確認します。  
-   あとの手順で必要なので、メモ帳などにコピーしておきます。
+<br />
 
-   - レジストリ名
-   - ログイン サーバー
-   - ユーザー名
-   - password
+3. Container Registry が作成されたら、[**アクセスキー**] を開きます。  
+4. [**管理者ユーザー**] を "**有効**" にします。  
+   これはあとの手順で Docker イメージのアップロードするのにログインする必要があるためです。
 
    <br />
    <img src="./images/03/acr_properties.jpg" width="560px" />
+
+<br />
 
 ---
 
@@ -54,9 +62,13 @@ Azure との連携が多く発生するので、ソリューションを作成�
 
    <img src="./images/03/vs_azure_signin.jpg" width="560px" />
 
+<br />
+
 4. Visual Studio Code のステータスバーで Azure にサインインしたことを確認します。
 
    <img src="./images/03/vs_azure_signedin.jpg" width="560px" />
+
+<br />
 
 ---
 
@@ -68,17 +80,23 @@ Visual Studio Code で IoT Edge ソリューションを作成します。
 
    <img src="./images/03/vs_new_iot_edge_solution.jpg" width="560px" />
 
+<br />
+
 2. ソリューションを作成するフォルダーを選択します。
 3. ソリューション名を入力します。  
    ここでは "**CatsDogsEdgeSolution**" とします。
 
    <img src="./images/03/vs_input_new_solution_name.jpg" width="560px" />
 
+<br />
+
 4. [Select Module Template] で "**Python Module**" を選択します。  
    Custom Vision からエクスポートしたファイルが Python で記述されたものだからです。  
    あとの手順で、ここで作成するモジュールに Custom Vision のエクスポートファイルをコピーします。
 
    <img src="./images/03/vs_new_solution_module_template.jpg" width="560px" />
+
+<br />
 
 5. モジュール名を入力します。  
    ここでは "**classifier**" とします。  
@@ -87,23 +105,31 @@ Visual Studio Code で IoT Edge ソリューションを作成します。
 
    <img src="./images/03/vs_new_solution_module_name.jpg" width="560px" />
 
+<br />
+
 6. [**Provide Docker Image Repository for the Module**] を編集します。  
    初期値は "localhost:5000/classifier" ですが、これを "**<ACR ログインサーバー名>/classifier**" に変更します。  
 
    <img src="./images/03/vs_new_solution_repositry.jpg" width="560px" />
 
+<br />
+
 7. ソリューションのひな形が生成されます。
 
-   <img src="./images/03/vs_new_solution_completed.jpg" width="480px" />
+   <img src="./images/03/vs_new_solution_completed.jpg" width="280px" />
+
+<br />
 
 ---
 
 ## ソリューションの設定
 
-1. "Please set container registry credentials to .env file" メッセージが表示されることがあります。  
-   あとの手順で ".env" ファイルを確認するので "Yes" で閉じてかまいません。
+1. "Please set container registry credentials to .env file" メッセージが表示されるかもしれません。  
+   あとの手順で ".env" ファイルを確認するので "Yes" で閉じます。
 
-   <img src="./images/03/vs_new_solution_set_env_message.jpg" width="560px" />
+   <img src="./images/03/vs_new_solution_set_env_message.jpg" width="360px" />
+
+<br />
 
 2. [コマンドパレット] で "**Azure IoT Edge: Set Default Target Platform for Edge Solution**" を選択します。  
     今回は "**amd64**" を選択します。
@@ -111,18 +137,22 @@ Visual Studio Code で IoT Edge ソリューションを作成します。
    <img src="./images/03/vs_set_default_target.jpg" width="560px" />
    <img src="./images/03/vs_set_default_target_amd64.jpg" width="560px" />
 
+<br />
+
 3. ".env" ファイルを開きます。  
    ACR のユーザー名、パスワードが登録済みであればそのままでかまいません。  
    空欄になっている場合は、ACR 作成時に記録した値を入力します。
 
    <img src="./images/03/vs_envfile.jpg" width="560px" />
 
+<br />
+
 ---
 
 以上で IoT Edge ソリューションを新規作成してアプリケーションを作成する準備ができました。  
-ここまでのステップではソリューションの "枠組み" ができたの状態です。
+ソリューションの "枠組み" ができた状態です。
 
 次のステップから、コードの追加・編集などを行ってアプリケーションを開発していきます。
 
 [前に戻る](./02_custom_vision.md) | [次に進む](./04_edit_classfier.md)  
-[目次に戻る](../README.md)
+[目次に戻る](./README.md)

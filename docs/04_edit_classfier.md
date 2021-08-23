@@ -19,17 +19,23 @@
 
 1. Custom Vision でエクスポートした ZIP ファイルをエクスプローラーで開きます。
 2. 前の手順で作成した "CatsDogsEdgeSolution" ソリューションの "modules\classfier" フォルダーをエクスプローラーで開きます。
-3. ZIP ファイル内のフォルダー2つ、ファイル2つをすべて "classfier" フォルダーにコピーします。
+3. ZIP ファイル内のフォルダー2つ、ファイル3つをすべて "classfier" フォルダーにコピーします。
 
    <img src="./images/04/copy_zip_to_classfier.jpg" width="560px" />
 
-   > 実際には "README.txt" はこのハンズオンではコピー不要です。  
-   > エクスポートしたファイル群を使った 予測 Web サービスの参考情報が載っているため、今回はコピーしました。  
-   > 余裕のある時に目を通すことをお勧めします。
+   > モジュールの動作のためには、実際には "README.txt" はコピー不要です。  
+   > Custom Vision の呼び出し方などの参考情報が載っているため今回はコピーしました。  
+   > 興味があれば一度目を通すことをお勧めします。  
+   >
+   > "LICENSE" はライセンス情報が書かれたファイルなので動作には不要ですが、今回はコピーしました。
+
+<br />
 
 4. Visual Studio Code でもファイル一覧が更新されていることを確認します。
 
-   <img src="./images/04/vs_cvfiles_in_classfier.jpg" width="480px" />
+   <img src="./images/04/vs_cvfiles_in_classfier.jpg" width="280px" />
+
+<br />
 
 ---
 
@@ -41,28 +47,34 @@
 今回の IoT Edge モジュールを作成するには Custom Vision の ZIP ファイルからコピーした "Dockerfile" だけを使用します。
 
 1. Visual Studio Code で "**modules\classfier\module.json**" を開きます。
-2. "**platforms**" を以下のように変更する。
+2. "**platforms**" を以下のように変更します。
 
    ```json
    "platforms": {
      "amd64": "./Dockerfile"
    }
-   ```
+   ```   
 
-   <img src="./images/04/vs_classifier_module_json.jpg" width="560px" />
+   <br />
 
+   <img src="./images/04/vs_classifier_module_json.jpg" width="560px" />  
+
+   <br />  
+   
    > 参考として、変更前の "platforms" パラメーターは以下の通りです。
    >
    > ```json
-   > "platforms": {
-   >   "amd64": "./Dockerfile.amd64",
-   >   "amd64.debug": "./Dockerfile.amd64.debug",
-   >   "arm32v7": "./Dockerfile.arm32v7",
-   >   "arm32v7.debug": "./Dockerfile.arm32v7.debug",
-   >   "arm64v8": "./Dockerfile.arm64v8",
-   >   "arm64v8.debug": "./Dockerfile.arm64v8.debug"
-   > }
+   >   "platforms": {
+   >      "amd64": "./Dockerfile.amd64",
+   >      "amd64.debug": "./Dockerfile.amd64.debug",
+   >      "arm32v7": "./Dockerfile.arm32v7",
+   >      "arm32v7.debug": "./Dockerfile.arm32v7.debug",
+   >      "arm64v8": "./Dockerfile.arm64v8",
+   >      "arm64v8.debug": "./Dockerfile.arm64v8.debug"
+   >   }
    > ```
+
+<br />
 
 ---
 
@@ -81,7 +93,13 @@
 - Dockerfile.arm64v8.debug
 - main.py
 
-<img src="./images/04/vs_classfier_delete_files.jpg" width="560px" />
+削除前  
+<img src="./images/04/vs_classfier_delete_files.jpg" width="280px" />
+
+削除後  
+<img src="./images/04/vs_classfier_files_deleted.jpg" width="280px" />
+
+<br />
 
 ---
 
@@ -93,4 +111,4 @@ Custom Vision は、学習モデルと Web サービスとして動作するコ�
 次のステップでは、ソリューションにカメラモジュール（今回はカメラシミュレーター）
 
 [前に戻る](./03_create_edgeapp.md) | [次に進む](./05_create_cameramodule.md)  
-[目次に戻る](../README.md)
+[目次に戻る](./README.md)
