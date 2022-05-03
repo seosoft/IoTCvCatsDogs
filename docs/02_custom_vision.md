@@ -4,7 +4,7 @@
 
 <br />
 
-[1. 教師データを用意](#%e6%95%99%e5%b8%ab%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e7%94%a8%e6%84%8f)
+[1. 教師データを用意](#%e6%95%99%e5%b8%ab%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e7%94%a8%e6%84%8f)  
 [2. Custom Vision で画像分類器を作成](#custom-vision-%e3%81%a7%e7%94%bb%e5%83%8f%e5%88%86%e9%a1%9e%e5%99%a8%e3%82%92%e4%bd%9c%e6%88%90)  
 [3. Azure ポータルで Custom Vision のリソース作成](#azure-%e3%83%9d%e3%83%bc%e3%82%bf%e3%83%ab%e3%81%a7-custom-vision-%e3%81%ae%e3%83%aa%e3%82%bd%e3%83%bc%e3%82%b9%e4%bd%9c%e6%88%90)  
 [4. Custom Vision ポータルでプロジェクト作成](#custom-vision-%e3%83%9d%e3%83%bc%e3%82%bf%e3%83%ab%e3%81%a7%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e4%bd%9c%e6%88%90)  
